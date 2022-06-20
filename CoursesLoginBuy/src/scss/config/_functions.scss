@@ -1,0 +1,8 @@
+@function color($name) {
+    @return map-get($colors, $name)
+}
+
+;
+@function backgrounds($name2) {
+    @return map-get($backgrounds, $name2)
+}

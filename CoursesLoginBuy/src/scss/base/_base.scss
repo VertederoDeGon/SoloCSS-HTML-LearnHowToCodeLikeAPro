@@ -1,0 +1,57 @@
+@charset "UTF-8";
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'OpenSans', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    color: map-get($colors, "main-font");
+    background-color: map-get($backgrounds, 'main-color');
+    overflow-x: hidden;
+}
+
+h2 {
+    font-family: 'Sans_B', sans-serif;
+    font-weight: bold;
+    margin: 0.3rem 0;
+}
+
+button {
+    background-color: none;
+    border: none;
+}
+
+section {
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 80%;
+}
+
+p {
+    margin-left: 2.7rem;
+    margin-right: 2.7rem;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+hr {
+    width: 100%;
+}
+
+span {
+    word-break: keep-all;
+}

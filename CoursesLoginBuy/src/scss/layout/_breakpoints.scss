@@ -1,0 +1,146 @@
+//@mixin responsive
+@include screen(764px) {
+    %pointer {
+        cursor: pointer;
+    }
+    .navbar {
+        &__h2 {
+            @extend %pointer;
+            grid-column: 3/5;
+        }
+        &__items {
+            grid-column: 6/10;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        &__li:hover {
+            @extend %pointer;
+            color: #381c7f;
+        }
+        &__menu {
+            display: none;
+        }
+    }
+    .logo {
+        @extend %pointer;
+        grid-column: 2/3;
+        width: 60px;
+    }
+    .hero {
+        &__list--css,
+        &__list--html,
+        &__list--js {
+            @extend %pointer;
+            font-size: 3rem;
+            padding: 1rem 2rem;
+        }
+        &__list--html {
+            background: linear-gradient(145deg, #f8800bc1, hsla(32, 60%, 36%, 0.728));
+            box-shadow: 19px 19px 38px #381c7f, -19px -19px 38px #891919;
+        }
+        &__list--css {
+            background: linear-gradient(145deg, #009fc1, hsla(243, 64%, 34%, 0.597));
+            box-shadow: 19px 19px 38px #381c7f, -19px -19px 38px #891919;
+        }
+        &__list--js {
+            background: linear-gradient(145deg, #ffdd00c1, hsla(65, 66%, 36%, 0.597));
+            box-shadow: 19px 19px 38px #381c7f, -19px -19px 38px #891919;
+        }
+        &__list--html:hover {
+            color: #ff8800;
+        }
+        &__list--css:hover {
+            color: #0090ff;
+        }
+        &__list--js:hover {
+            color: #ffdd00;
+        }
+    }
+    .wrapper {
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .wrap__container {
+        min-height: 80vh;
+        justify-content: space-around;
+    }
+    .button {
+        height: 40px;
+        font-size: 1.25rem;
+        @extend %pointer;
+        transition: all 0.2s ease;
+        &:active {
+            color: color("main-font");
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 100%;
+            height: 100%;
+            outline: color("main-font");
+            transition: 0.2s;
+            background-color: color("main-font");
+        }
+        &--html:after,
+        &--html:hover:after {
+            background-color: #ff8800;
+        }
+        &--css:after,
+        &--css:hover:after {
+            background-color: #0090ff;
+        }
+        &--js:after,
+        &--js:hover:after {
+            background-color: #ffdd00;
+        }
+        &:hover:after {
+            position: absolute;
+            z-index: -10;
+            top: 0;
+            left: 0;
+        }
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        align-content: center;
+        justify-items: center;
+        background: linear-gradient(145deg, #11222bc1, #23222b98);
+        border: 8px solid;
+        border-image: linear-gradient(45deg, #381c7f, #891919) 1;
+        &__h2,
+        &__link {
+            @extend %pointer;
+            justify-self: center;
+            align-self: center;
+        }
+        &__h2 {
+            padding: 1rem 2rem;
+            grid-column: 2/4;
+            grid-row: 1/2;
+        }
+        &__link {
+            display: none;
+        }
+        &__logo {
+            @extend %pointer;
+            align-self: center;
+            justify-self: end;
+            grid-column: 1/2;
+            grid-row: 2/5;
+        }
+        &__img {
+            justify-self: center;
+            align-self: center;
+            display: block;
+            grid-column: 2/5;
+            grid-row: 2/5;
+            margin-bottom: 3rem;
+        }
+    }
+}

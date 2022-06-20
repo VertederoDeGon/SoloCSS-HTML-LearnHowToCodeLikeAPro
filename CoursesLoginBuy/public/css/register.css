@@ -1,0 +1,102 @@
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh
+}
+
+.register-header {
+    position: relative;
+    top: 6rem;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto
+}
+
+.register-header h1 {
+    box-shadow: 10px 10px #381c7f, -10px -10px #891919;
+    text-align: center;
+    font-size: 300%;
+    text-shadow: 0px 5px 15px #020202;
+    min-width: 134px
+}
+
+.registration {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 50vh;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    -o-border-image: linear-gradient(45deg, #381c7f, #891919) 1;
+    border-image: linear-gradient(45deg, #381c7f, #891919) 1;
+    background: linear-gradient(145deg, #381c7fc1, #891919c1);
+    box-shadow: 25px 25px 79px #891919, -25px -25px 79px #381c7f
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%
+}
+
+.form input[type=button],
+.form input[type=password],
+.form input[type=text] {
+    font-family: 'OpenSans', sans-serif;
+    border: 2px solid #f2f2f2
+}
+
+.form input[type=password],
+.form input[type=text] {
+    width: 80%;
+    margin-left: 10%;
+    align-self: start;
+    line-height: 2.7rem;
+    border-radius: 5px;
+    outline: none
+}
+
+.form input[type=button] {
+    height: 30px;
+    width: 100px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    text-transform: uppercase
+}
+
+.form__label {
+    margin-left: 10%;
+    align-self: start;
+    color: #f2f2f2
+}
+
+@media screen and (min-width:764px) {
+    .registration {
+        height: 60vh;
+        width: 50%
+    }
+    .register-header {
+        width: 60%;
+        margin-right: auto;
+        margin-left: auto;
+        box-shadow: 18px 18px #381c7f, -18px -18px #891919;
+        text-align: center;
+        font-size: 150%
+    }
+}
+
+@media screen and (min-width:1114px) {
+    .register-header {
+        box-shadow: 25px 25px #381c7f, -25px -25px #891919;
+        text-align: center;
+        font-size: 180%;
+        width: 35%
+    }
+    .registration {
+        width: 35%
+    }
+}

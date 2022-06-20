@@ -1,0 +1,122 @@
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7rem;
+    width: 80%
+}
+
+.login-header {
+    position: relative;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto
+}
+
+.login-header h1 {
+    box-shadow: 10px 10px #381c7f, -10px -10px #891919;
+    text-align: center;
+    font-size: 300%;
+    text-shadow: 0px 5px 15px #020202;
+    min-width: 134px
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 50vh;
+    padding: 2rem;
+    -o-border-image: linear-gradient(45deg, #381c7f, #891919) 1;
+    border-image: linear-gradient(45deg, #381c7f, #891919) 1;
+    background: linear-gradient(145deg, #381c7fc1, #891919c1);
+    box-shadow: 25px 25px 79px #891919, -25px -25px 79px #381c7f;
+    text-align: center
+}
+
+.login-form label {
+    margin-left: 10%;
+    align-self: start;
+    color: #f2f2f2
+}
+
+.login input[type=button],
+.login input[type=password],
+.login input[type=text] {
+    font-family: 'OpenSans', sans-serif;
+    border: 2px solid #f2f2f2
+}
+
+.login input[type=password],
+.login input[type=text] {
+    width: 80%;
+    margin-left: 10%;
+    align-self: start;
+    line-height: 2.7rem;
+    border-radius: 5px;
+    outline: none
+}
+
+.login-form input[type=button] {
+    height: 30px;
+    width: 100px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    text-transform: uppercase
+}
+
+.login-form a {
+    align-self: start;
+    margin-left: 50px;
+    margin: 0
+}
+
+.sign-up {
+    color: #f2f2f2
+}
+
+.no-access,
+.try-again {
+    color: #E86850
+}
+
+.no-access,
+.sign-up,
+.try-again {
+    text-decoration: underline
+}
+
+@media only screen and (min-width:764px) {
+    .login-form input[type=button],
+    .no-access,
+    .sign-up,
+    .try-again {
+        cursor: pointer
+    }
+    .login {
+        display: block;
+        max-width: 640px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 8rem
+    }
+    .login-header {
+        width: 60%;
+        margin-right: auto;
+        margin-left: auto;
+        box-shadow: 25px 25px #381c7f, -25px -25px #891919;
+        text-align: center;
+        font-size: 200%
+    }
+}

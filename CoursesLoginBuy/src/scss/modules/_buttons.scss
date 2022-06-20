@@ -1,0 +1,22 @@
+.button {
+    position: relative;
+    width: auto;
+    height: auto;
+    z-index: 10;
+    min-width: 130px;
+    height: 50px;
+    padding: 5px 10px;
+    border: 1px solid;
+    display: inline-block;
+    font-weight: bold;
+    color: backgrounds('second-font');
+    &--html {
+        background-color: #ff8800c1;
+    }
+    &--css {
+        background-color: #0090ffc1;
+    }
+    &--js {
+        background-color: #ffdd00c1;
+    }
+}
